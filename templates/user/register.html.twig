@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}bboottori - Inscription{% endblock %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('register') }}
+{% endblock %}
+
+{% block content %}
+
+<div id='register' class='example-wrapper'>
+	<h1>Formulaire d'inscription ✅</h1>
+    <div class='container'>
+ 	   <div class='row'>
+			<input id='lastname' type='text' placeholder='Nom de famille' />
+	    </div>
+	    <div class='row'>
+			<input id='firstname' type='text' placeholder='Prénom' />
+	    </div>
+	    <div class='row'>
+			<input id='email' type='email' placeholder='E-mail' />
+	    </div>
+	    <div class='row'>
+			<input id='username' type='text' placeholder="Nom d'utilisateur" />
+	    </div>
+	    <div class='row'>
+			<input id='pwd' class="togglePwd" type='password' placeholder='Mot de passe' />
+			<span id='eyePwd' class='fa fa-xs fa-eye' toggle='pwd'></span>
+	    </div>
+	    <div class='row'>
+	    	&nbsp;
+	    </div>
+	    <div class='row'>
+	    	<input id='subscribeBtn' type='button' value="S'inscrire" />
+	    </div>
+	</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ encore_entry_script_tags('register') }}
+{% endblock %}
